@@ -28,7 +28,7 @@ function handleButtonClick(buttonId, message) {
 }
 
 // Демонстрація використання функції (припустимо, що HTML містить кнопку з ID 'myButton')
-// handleButtonClick('myButton', 'Button clicked!');
+handleButtonClick('myButton', 'Button clicked!');
 
 /*
  * #2
@@ -49,7 +49,7 @@ function trackMousePosition() {
   });
 }
 
-// console.log(trackMousePosition())
+console.log(trackMousePosition())
 
 /*
  * #3
@@ -77,7 +77,7 @@ function setupEventDelegation(selector) {
   }
 }
 
-// setupEventDelegation('#testList')
+setupEventDelegation('#testList')
 
 // Експорт функції для використання та тестування
 export { handleButtonClick, trackMousePosition, setupEventDelegation }
