@@ -15,7 +15,7 @@ let flag = true
 
 let startX = 0
 let endX = 0
-
+let isDragging = false
 
 const initSlider = () => {
   const img = document.createElement('img')
@@ -142,22 +142,6 @@ const handleTouchEnd = () => {
   }
 }
 
-const handleMouseDown = (event) => {
-  startX = event.clientX
-}
-
-const handleMouseMove = (event) => {
-  endX = event.clientX
-}
-
-const handleMouseUp = () => {
-  if (startX - endX > 50) {
-    nextSlide()
-  } else if (endX - startX > 50) {
-    prevSlide()
-  }
-}
-
 initSlider()
 
 document.querySelector('.main-slider__next').addEventListener('click', nextSlide)
@@ -168,10 +152,6 @@ document.addEventListener('keydown', handleKeydown)
 sliderPlace.addEventListener('touchstart', handleTouchStart)
 sliderPlace.addEventListener('touchmove', handleTouchMove)
 sliderPlace.addEventListener('touchend', handleTouchEnd)
-
-sliderPlace.addEventListener('mousedown', handleMouseDown)
-sliderPlace.addEventListener('mousemove', handleMouseMove)
-sliderPlace.addEventListener('mouseup', handleMouseUp)
 
 startAutoSlide()
 
